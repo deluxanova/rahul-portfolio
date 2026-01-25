@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "AZ-900 Azure Fundamentals",
+    "issuer": "Microsoft",
+    "date": "Dec 2021",
+    "link": ""
+  },
+  {
+    "id": 2,
+    "name": "DP-900 Azure Data Fundamentals",
+    "issuer": "Microsoft",
+    "date": "Dec 2021",
+    "link": ""
+  }
+]

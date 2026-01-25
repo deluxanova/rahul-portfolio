@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "company": "ShyftLabs",
+    "role": "Senior Data Engineer",
+    "location": "Hyderabad, Telangana",
+    "startDate": "Mar 2024",
+    "endDate": "Present",
+    "description": "Leading development of an Ad data platform utilizing modern data technologies.",
+    "achievements": [
+      "Led ad data platform development using MongoDB, Kafka, Druid, Postgres, and Snowflake",
+      "Built FastAPI services with CI/CD via Docker and Kubernetes",
+      "Improved analytics performance with Elasticsearch, Kibana, Druid, and ClickHouse",
+      "Delivered anomaly-detection and ad-targeting improvements",
+      "Shipped Superset dashboards for validation and monitoring"
+    ],
+    "technologies": ["MongoDB", "Apache Kafka", "Apache Druid", "Postgres", "Snowflake", "FastAPI", "Docker", "Kubernetes", "ElasticSearch", "Kibana", "Clickhouse", "Apache Superset"]
+  },
+  {
+    "id": 2,
+    "company": "Infosys Limited",
+    "role": "Specialist Programmer",
+    "location": "Hyderabad, Telangana",
+    "startDate": "Aug 2021",
+    "endDate": "Mar 2024",
+    "description": "Delivered scalable data solutions on Azure Cloud in an Agile environment.",
+    "achievements": [
+      "Created 15+ data pipelines and BI features for real-time and batch processing",
+      "Optimized data pipelines reducing processing time from 10 to 6 hours, saving $5K/month",
+      "Built 10+ scalable pipelines in Azure Data Factory with dynamic scaling",
+      "Orchestrated CI/CD pipeline reducing deployment time by 20%",
+      "Designed 10+ dimensions and facts in Azure Synapse Analytics"
+    ],
+    "technologies": ["Azure", "Azure Data Factory", "Azure Databricks", "Azure Synapse Analytics", "Azure DevOps", "Scala", "PySpark", "Spark SQL", "T-SQL", "Power BI"]
+  }
+]
