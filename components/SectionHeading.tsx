@@ -8,7 +8,7 @@ export default function SectionHeading({ index, title, description }: SectionHea
   return (
     <div className="mb-20">
       <div className="flex items-center gap-3 mb-4">
-        <span className="font-mono text-sm text-primary">// {index}</span>
+        <span className="font-mono text-sm text-primary">{`// ${index}`}</span>
         <span className="h-px flex-1 bg-border" />
       </div>
       <h2 className="text-4xl sm:text-5xl font-light mb-4">{title}</h2>
