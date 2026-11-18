@@ -38,7 +38,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         isScrolled
-          ? 'bg-background/90 backdrop-blur-sm border-b border-border'
+          ? 'bg-background/80 backdrop-blur-md border-b border-border'
           : 'bg-transparent'
       }`}
     >
@@ -50,12 +50,13 @@ export default function Navbar() {
               e.preventDefault()
               handleNavClick('#home')
             }}
-            className="text-lg font-semibold text-foreground hover:text-muted-foreground transition-colors"
+            className="font-mono text-sm text-foreground hover:text-primary transition-colors flex items-center gap-2"
           >
-            RRS
+            <span className="w-2 h-2 rounded-full bg-primary dot-live" />
+            ~/rahul
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -64,9 +65,9 @@ export default function Navbar() {
                   e.preventDefault()
                   handleNavClick(item.href)
                 }}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="font-mono text-xs tracking-wide text-muted-foreground hover:text-primary transition-colors px-3 py-2"
               >
-                {item.name}
+                [<span className="text-foreground/70 group-hover:text-primary">{item.name.toLowerCase()}</span>]
               </a>
             ))}
             <button
@@ -120,9 +121,9 @@ export default function Navbar() {
                   e.preventDefault()
                   handleNavClick(item.href)
                 }}
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="block font-mono text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                {item.name}
+                [{item.name.toLowerCase()}]
               </a>
             ))}
           </div>

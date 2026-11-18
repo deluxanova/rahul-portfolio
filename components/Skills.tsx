@@ -2,28 +2,25 @@
 
 import skillsData from '@/data/skills.json'
 import certificationsData from '@/data/certifications.json'
+import SectionHeading from '@/components/SectionHeading'
 import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 
 const skillCategories = [
-  { key: 'languages', title: 'Languages' },
-  { key: 'cloud', title: 'Cloud' },
-  { key: 'databases', title: 'Databases' },
-  { key: 'bigData', title: 'Big Data' },
-  { key: 'devops', title: 'DevOps' },
-  { key: 'frameworks', title: 'Frameworks' },
-  { key: 'tools', title: 'Tools' },
+  { key: 'languages', title: 'languages' },
+  { key: 'cloud', title: 'cloud' },
+  { key: 'databases', title: 'databases' },
+  { key: 'bigData', title: 'big_data' },
+  { key: 'devops', title: 'devops' },
+  { key: 'frameworks', title: 'frameworks' },
+  { key: 'tools', title: 'tools' },
 ]
 
 export default function Skills() {
   return (
     <section id="skills" className="section-padding border-t border-border">
       <div className="container-custom">
-        <div className="mb-20">
-          <h2 className="text-4xl sm:text-5xl font-light mb-4">
-            Skills
-          </h2>
-        </div>
+        <SectionHeading index="02" title="Skills" description="$ ls ./skills --recursive" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {skillCategories.map((category) => {
@@ -32,12 +29,17 @@ export default function Skills() {
 
             return (
               <div key={category.key}>
-                <h3 className="text-lg font-light mb-3">
-                  {category.title}
+                <h3 className="font-mono text-sm text-primary mb-3">
+                  ./{category.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill: { name: string; level: number }) => (
-                    <Badge key={skill.name} variant="outline" className="text-xs py-0.5">
+                    <Badge
+                      key={skill.name}
+                      variant="outline"
+                      className="font-mono text-xs py-1 pl-2 pr-2.5 gap-1.5 hover:border-primary/50 hover:text-primary transition-colors"
+                    >
+                      <span className="w-1 h-1 rounded-full bg-primary" />
                       {skill.name}
                     </Badge>
                   ))}
@@ -48,15 +50,15 @@ export default function Skills() {
         </div>
 
         <div className="mt-12 pt-12 border-t border-border">
-          <h3 className="text-lg font-light mb-4">Certifications</h3>
-          <div className="space-y-3">
+          <h3 className="font-mono text-sm text-primary mb-4">./certifications</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {certificationsData.map((cert) => (
-              <Card key={cert.id} className="border-border">
+              <Card key={cert.id} className="border-border glow-card">
                 <CardContent className="pt-6">
                   <div className="text-sm font-light mb-1">
                     {cert.name}
                   </div>
-                  <div className="text-xs text-muted-foreground">
+                  <div className="font-mono text-xs text-muted-foreground">
                     {cert.issuer} · {cert.date}
                   </div>
                 </CardContent>

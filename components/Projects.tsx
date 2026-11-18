@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
 import projectsData from '@/data/projects.json'
+import SectionHeading from '@/components/SectionHeading'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -21,11 +22,7 @@ export default function Projects() {
   return (
     <section id="projects" className="section-padding border-t border-border">
       <div className="container-custom">
-        <div className="mb-20">
-          <h2 className="text-4xl sm:text-5xl font-light mb-4">
-            Projects
-          </h2>
-        </div>
+        <SectionHeading index="03" title="Projects" description="$ find . -type project -maxdepth 2" />
 
         <div className="flex flex-wrap gap-3 mb-12">
           {categories.map((category) => (
@@ -34,19 +31,19 @@ export default function Projects() {
               onClick={() => setSelectedCategory(category)}
               variant={selectedCategory === category ? "default" : "outline"}
               size="sm"
-              className="text-sm"
+              className="font-mono text-xs"
             >
-              {category}
+              [{category.toLowerCase()}]
             </Button>
           ))}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
-            <Card key={project.id} className="border-border hover:border-primary/50 transition-colors">
+            <Card key={project.id} className="border-border glow-card">
               <CardHeader>
                 <div className="mb-2">
-                  <Badge variant="secondary" className="text-xs">
+                  <Badge variant="secondary" className="font-mono text-xs">
                     {project.category}
                   </Badge>
                 </div>
@@ -58,7 +55,7 @@ export default function Projects() {
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="outline" className="text-xs">
+                    <Badge key={tech} variant="outline" className="font-mono text-xs">
                       {tech}
                     </Badge>
                   ))}

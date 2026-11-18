@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import SectionHeading from '@/components/SectionHeading'
 import { FiCalendar, FiClock } from 'react-icons/fi'
 
 // Blog data structure - you can move this to data/blog.json later
@@ -21,28 +22,25 @@ export default function Blog() {
   return (
     <section id="blog" className="section-padding border-t border-border">
       <div className="container-custom">
-        <div className="mb-20">
-          <h2 className="text-4xl sm:text-5xl font-light mb-4">
-            Blog
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Thoughts, insights, and updates on data engineering, technology, and more.
-          </p>
-        </div>
+        <SectionHeading
+          index="04"
+          title="Blog"
+          description="Thoughts, insights, and updates on data engineering, technology, and more."
+        />
 
         {blogPosts.length === 0 ? (
-          <div className="text-center py-16">
-            <p className="text-muted-foreground text-lg mb-4">
-              Blog posts coming soon...
+          <div className="border border-dashed border-border rounded-lg py-16 text-center font-mono">
+            <p className="text-muted-foreground text-sm mb-2">
+              <span className="text-primary">#</span> TODO: write first post
             </p>
-            <p className="text-sm text-muted-foreground">
-              Check back later for articles on data engineering, best practices, and technical insights.
+            <p className="text-xs text-muted-foreground">
+              check back later for articles on data engineering, best practices, and technical insights.
             </p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <Card key={post.id} className="border-border hover:border-primary/50 transition-colors cursor-pointer">
+              <Card key={post.id} className="border-border glow-card cursor-pointer">
                 <CardHeader>
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
                     <div className="flex items-center gap-1">

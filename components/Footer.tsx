@@ -7,11 +7,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-gray-200 dark:border-gray-800">
+    <footer className="border-t border-border">
       <div className="container-custom px-6 sm:px-8 lg:px-12 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500 dark:text-gray-500">
-            © {currentYear} {personalData.name}
+          <p className="font-mono text-xs text-muted-foreground">
+            <span className="text-primary">rahul@portfolio</span>
+            <span className="text-foreground/60">:~$</span> echo &quot;&copy; {currentYear} {personalData.name}&quot;
           </p>
 
           <div className="flex gap-6">
@@ -19,7 +20,7 @@ export default function Footer() {
               href={personalData.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="GitHub"
             >
               <FiGithub className="w-5 h-5" />
@@ -28,14 +29,14 @@ export default function Footer() {
               href={personalData.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <FiLinkedin className="w-5 h-5" />
             </a>
             <a
               href={`mailto:${personalData.email}`}
-              className="text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Email"
             >
               <FiMail className="w-5 h-5" />

@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import SectionHeading from '@/components/SectionHeading'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -40,11 +41,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section-padding border-t border-border">
       <div className="container-custom">
-        <div className="mb-20">
-          <h2 className="text-4xl sm:text-5xl font-light mb-4">
-            Contact
-          </h2>
-        </div>
+        <SectionHeading index="05" title="Contact" description="$ echo &quot;let's build something&quot; | mail rahul" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-8">
@@ -55,13 +52,13 @@ export default function Contact() {
             <div className="space-y-6">
               <a
                 href={`mailto:${personalData.email}`}
-                className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors"
+                className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors font-mono text-sm"
               >
                 <FiMail className="w-5 h-5" />
                 <span>{personalData.email}</span>
               </a>
 
-              <div className="flex items-center gap-4 text-muted-foreground">
+              <div className="flex items-center gap-4 text-muted-foreground font-mono text-sm">
                 <FiMapPin className="w-5 h-5" />
                 <span>{personalData.location}</span>
               </div>
@@ -72,7 +69,7 @@ export default function Contact() {
                 href={personalData.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <FiGithub className="w-5 h-5" />
               </a>
@@ -80,22 +77,22 @@ export default function Contact() {
                 href={personalData.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <FiLinkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
 
-          <Card className="border-border">
+          <Card className="border-border glow-card">
             <CardContent className="pt-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm text-muted-foreground mb-2"
+                    className="block font-mono text-xs text-primary mb-2"
                   >
-                    Name
+                    $ name
                   </label>
                   <Input
                     type="text"
@@ -105,15 +102,16 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="Your Name"
+                    className="font-mono text-sm"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm text-muted-foreground mb-2"
+                    className="block font-mono text-xs text-primary mb-2"
                   >
-                    Email
+                    $ email
                   </label>
                   <Input
                     type="email"
@@ -123,15 +121,16 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="your.email@example.com"
+                    className="font-mono text-sm"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm text-muted-foreground mb-2"
+                    className="block font-mono text-xs text-primary mb-2"
                   >
-                    Message
+                    $ message
                   </label>
                   <Textarea
                     id="message"
@@ -141,21 +140,22 @@ export default function Contact() {
                     required
                     rows={6}
                     placeholder="Your message..."
+                    className="font-mono text-sm"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full"
+                  className="w-full font-mono text-sm"
                 >
                   {isSubmitting ? (
-                    'Sending...'
+                    './sending...'
                   ) : submitStatus === 'success' ? (
-                    'Sent ✓'
+                    'sent ✓'
                   ) : (
                     <>
-                      <FiSend className="w-4 h-4 mr-2" /> Send Message
+                      <FiSend className="w-4 h-4 mr-2" /> ./send_message.sh
                     </>
                   )}
                 </Button>
