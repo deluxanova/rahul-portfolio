@@ -3,15 +3,15 @@
   "role": "Senior Data Engineer",
   "email": "rahul.raj.singh220899@gmail.com",
   "location": "Hyderabad, Telangana",
-  "summary": "Experienced Data Engineer specializing in building scalable data platforms and pipelines. Passionate about leveraging cutting-edge technologies to transform data into actionable insights.",
+  "summary": "Senior Data Engineer with 5+ years of experience building real-time data platforms and streaming systems. Lead a team of 4 and own the ad data platform behind Carter, a commerce media product, processing 50M+ events/day on Kafka, Druid, ClickHouse, and Redis. Strong in OLAP performance tuning, RTB and budget-pacing systems, and API-driven data serving.",
   "social": {
     "github": "https://github.com/deluxanova",
     "linkedin": "https://linkedin.com/in/rahulrajsingh99",
     "leetcode": "https://leetcode.com/rahulraj99"
   },
   "highlights": {
-    "experience": "4+ Years",
+    "experience": "5+ Years",
     "currentRole": "Senior Data Engineer at ShyftLabs",
-    "coreTech": "Azure, Spark, Kafka, MongoDB"
+    "coreTech": "Python, Kafka, Redis, ClickHouse, Druid"
   }
 }

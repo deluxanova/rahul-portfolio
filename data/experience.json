@@ -6,30 +6,33 @@
     "location": "Hyderabad, Telangana",
     "startDate": "Mar 2024",
     "endDate": "Present",
-    "description": "Leading development of an Ad data platform utilizing modern data technologies.",
+    "description": "Leading a team of 4 building the real-time ad serving and data platform behind Carter, ShyftLabs' in-house commerce media product.",
     "achievements": [
-      "Led ad data platform development using MongoDB, Kafka, Druid, Postgres, and Snowflake",
-      "Built FastAPI services with CI/CD via Docker and Kubernetes",
-      "Improved analytics performance with Elasticsearch, Kibana, Druid, and ClickHouse",
-      "Delivered anomaly-detection and ad-targeting improvements",
-      "Shipped Superset dashboards for validation and monitoring"
+      "Led a team of 4 (1 data engineer, 2 interns) in the architecture and end-to-end development of the ad data platform behind Carter, processing 50M+ ad events/day across 20+ advertiser accounts",
+      "Architected an event-driven RTB decisioning and ad metrics service in Python on Kafka and Redis, using atomic RedisJSON updates and multi-window aggregations to keep state consistent at 2k+ events/sec peak under concurrent write contention",
+      "Built a FastAPI ingestion and serving layer for real-time, API-driven access to ad event data, reducing data-to-insight latency by 12%",
+      "Improved budget pacing and ad selection logic using real-time aggregates, raising campaign delivery efficiency by 25% and reducing underspend across 1000+ active campaigns",
+      "Redesigned Druid tables and ClickHouse OLAP schemas behind customer-facing dashboards, cutting average query latency by 25% and dashboard load times from 20s to 1-2s",
+      "Set up CI/CD with Docker and Kubernetes, enabling zero-downtime deployments and 99.9% uptime across 6 production services",
+      "Owned on-call and built observability with Elasticsearch and Kibana, cutting MTTD for incidents by 30% and enabling 5-minute SLA monitoring",
+      "Conducted 50+ technical interviews for associate, senior, and lead data engineer roles, and mentored 2 interns"
     ],
-    "technologies": ["MongoDB", "Apache Kafka", "Apache Druid", "Postgres", "Snowflake", "FastAPI", "Docker", "Kubernetes", "ElasticSearch", "Kibana", "Clickhouse", "Apache Superset"]
+    "technologies": ["Python", "Apache Kafka", "Redis", "MongoDB", "Apache Druid", "ClickHouse", "Postgres", "Snowflake", "FastAPI", "Docker", "Kubernetes", "ElasticSearch", "Kibana", "Apache Superset"]
   },
   {
     "id": 2,
     "company": "Infosys Limited",
-    "role": "Specialist Programmer",
+    "role": "Specialist Programmer (Data Engineer)",
     "location": "Hyderabad, Telangana",
     "startDate": "Aug 2021",
     "endDate": "Mar 2024",
     "description": "Delivered scalable data solutions on Azure Cloud in an Agile environment.",
     "achievements": [
-      "Created 15+ data pipelines and BI features for real-time and batch processing",
-      "Optimized data pipelines reducing processing time from 10 to 6 hours, saving $5K/month",
-      "Built 10+ scalable pipelines in Azure Data Factory with dynamic scaling",
-      "Orchestrated CI/CD pipeline reducing deployment time by 20%",
-      "Designed 10+ dimensions and facts in Azure Synapse Analytics"
+      "Built and ran 15+ production pipelines processing 500 GB+ daily across ADLS Gen2, Azure SQL Database, and Azure Synapse Analytics, using Azure Data Factory with retries, dynamic scaling, and alerting to reach a 99.99% success rate across 30+ scheduled jobs",
+      "Optimized Spark ETL in Scala, PySpark, and Spark SQL on Azure Databricks, cutting processing time by 40% and compute spend by $5,000/month",
+      "Built data quality, validation, and reconciliation frameworks in T-SQL, resolving 98% of data quality issues and reducing downstream reporting errors across 5+ business domains",
+      "Modeled fact and dimension tables in Azure Synapse Analytics, powering semantic models and dashboards used by 100+ stakeholders",
+      "Orchestrated CI/CD pipelines in Azure DevOps, reducing deployment time by 20%"
     ],
     "technologies": ["Azure", "Azure Data Factory", "Azure Databricks", "Azure Synapse Analytics", "Azure DevOps", "Scala", "PySpark", "Spark SQL", "T-SQL", "Power BI"]
   }
